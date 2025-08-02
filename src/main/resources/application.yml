@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: local
+
+# SpringDoc ??
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+
+jwt:
+  secret: 7a620a6cd951f7072105c91b9aec1a0399f3363712f729f04804f14379c07c5d5e70fdd28f807d3a4a2b59f23f7a0d9d28d91c924fafc7688426f8fdf1a5ed20
+  expiration-time: 3600000  # JWT ?? ?? ?? (? ??)
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+
+management:
+  endpoints:  # endpoint? ??? endpoints
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,info  # ??? ????? ??
+  endpoint:
+    health:
+      show-details: when-authorized  # ???? ?? ?? ?? ??
+  health:
+    db:
+      enabled: true
+

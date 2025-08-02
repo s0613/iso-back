@@ -1,0 +1,15 @@
+cat > .gitignore <<EOF
+# Gradle 빌드 디렉터리
+build/
+
+# 로컬 설정 파일
+src/main/resources/application-local.yml
+build/resources/main/application-local.yml
+
+# IDE 설정
+.idea/
+*.iml
+
+# OS 불필요 파일
+.DS_Store
+EOF
